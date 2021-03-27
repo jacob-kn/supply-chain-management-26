@@ -6,7 +6,7 @@ import java.sql.*;
  * Provides methods to access and update the inventory database.
  * @author 		Jacob Nguyen <a href="mailto:jacob.nguyen@ucalgary.ca">
  * 								jacob.nguyen@ucalgary.ca</a>
- * @version		1.3
+ * @version		1.4
  * @since 		1.0
  */
 public class Inventory {
@@ -28,6 +28,27 @@ public class Inventory {
 		this.USERNAME = userName;
 		this.PASSWORD = password;
 	}
+	/**
+     * Getter method for the database url data member.
+     * @return	database url.
+     */
+    public String getDBURL(){
+        return DBURL;
+    }
+    /**
+     * Getter method for username.
+     * @return	user's account username.
+     */
+    public String getUSERNAME(){
+        return USERNAME;
+    }
+    /**
+	 * Getter method for password.
+	 * @return	user's account password.
+	 */
+    public String getPASSWORD(){
+        return PASSWORD;
+    }
 	/**
 	 * Creates connection to the database
 	 */
