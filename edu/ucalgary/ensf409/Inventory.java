@@ -11,7 +11,7 @@ import java.sql.*;
  */
 public class Inventory {
 	private final String DBURL;
-	private final String USERNAME;
+	private final String USERNAME; //hi my name is bob
 	private final String PASSWORD;
 	
 	private Connection dbConnect;
