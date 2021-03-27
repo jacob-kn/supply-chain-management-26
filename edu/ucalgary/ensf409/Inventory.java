@@ -123,4 +123,15 @@ public class Inventory {
 			close();
 		}
 	}
+	
+	 //3 getters for the 3 data members
+    public String getDBURL(){
+        return DBURL;
+    }
+    public String getUSERNAME(){
+        return USERNAME;
+    }
+    public String getPASSWORD(){
+        return PASSWORD;
+    }
 }
