@@ -11,7 +11,7 @@ import java.sql.*;
  */
 public class Inventory {
 	private final String DBURL;
-	private final String USERNAME; //hi my name is bob
+	private final String USERNAME;
 	private final String PASSWORD;
 	
 	private Connection dbConnect;
@@ -54,6 +54,7 @@ public class Inventory {
 	 */
 	public void initializeConnection() {
 		try {
+			// initializes Connection datamember
 			dbConnect = DriverManager.getConnection(DBURL, USERNAME, PASSWORD);
 		} catch (SQLException e) {
 			e.printStackTrace();
@@ -64,6 +65,7 @@ public class Inventory {
 	 */
 	public void close() {
 		try {
+			// closes resources
 			results.close();
 			dbConnect.close();
 		} catch (SQLException e) {
@@ -121,6 +123,7 @@ public class Inventory {
 	 */
 	public void removeFurniture(String category, String[] id) {
 		for (int i = 0; i < id.length; i++) {
+			// calls single String argument version of this method
 			this.removeFurniture(category, id[i]);
 		}
 	}
@@ -133,6 +136,7 @@ public class Inventory {
 	public void removeFurniture(String category, String id) {
 		initializeConnection();
 		try {
+			// deletes item from the specified category using the primary key
 			String query = "DELETE FROM " + category + " WHERE ID = ?";
 			PreparedStatement deleteStmt = dbConnect.prepareStatement(query);
 			deleteStmt.setString(1, id);
@@ -144,15 +148,4 @@ public class Inventory {
 			close();
 		}
 	}
-	
-	 //3 getters for the 3 data members
-    public String getDBURL(){
-        return DBURL;
-    }
-    public String getUSERNAME(){
-        return USERNAME;
-    }
-    public String getPASSWORD(){
-        return PASSWORD;
-    }
 }
