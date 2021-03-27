@@ -32,21 +32,21 @@ public class Inventory {
      * Getter method for the database url data member.
      * @return	database url.
      */
-    public String getDBURL(){
+    public String getDburl(){
         return DBURL;
     }
     /**
      * Getter method for username.
      * @return	user's account username.
      */
-    public String getUSERNAME(){
+    public String getUsername(){
         return USERNAME;
     }
     /**
 	 * Getter method for password.
 	 * @return	user's account password.
 	 */
-    public String getPASSWORD(){
+    public String getPassword(){
         return PASSWORD;
     }
 	/**
