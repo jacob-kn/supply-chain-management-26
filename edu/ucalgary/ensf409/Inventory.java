@@ -6,7 +6,7 @@ import java.sql.*;
  * Provides methods to access and update the inventory database.
  * @author 		Jacob Nguyen <a href="mailto:jacob.nguyen@ucalgary.ca">
  * 								jacob.nguyen@ucalgary.ca</a>
- * @version		1.4
+ * @version		1.5
  * @since 		1.0
  */
 public class Inventory {
@@ -17,38 +17,48 @@ public class Inventory {
 	private Connection dbConnect;
 	private ResultSet results;
 	/**
-     * Constructor. Initializes three public final String data members DBURL,
-     * USERNAME, and PASSWORD with the provided database and user information.
-     * @param dbUrl		database url.
-     * @param userName	user's account username.
-     * @param password	user's account password.
-     */
+    	 * Constructor. Initializes three public final String data members DBURL,
+    	 * USERNAME, and PASSWORD with the provided database and user information.
+    	 * @param dbUrl		database url.
+    	 * @param userName	user's account username.
+    	 * @param password	user's account password.
+    	 */
 	public Inventory(String dbUrl, String userName, String password) {
 		this.DBURL = dbUrl;
 		this.USERNAME = userName;
 		this.PASSWORD = password;
 	}
 	/**
-     * Getter method for the database url data member.
-     * @return	database url.
-     */
-    public String getDburl(){
-        return DBURL;
-    }
-    /**
-     * Getter method for username.
-     * @return	user's account username.
-     */
-    public String getUsername(){
-        return USERNAME;
-    }
-    /**
+	 * Default constructor. Initializes the data members DBURL, USERNAME, 
+	 * and PASSWORD with the default values
+	 * DBURL = "jdbc:mysql://localhost/inventory"
+	 * USERNAME = "scm"
+	 * Password = "ensf409"
+	 */
+	public Inventory() {
+		this("jdbc:mysql://localhost/inventory", "scm", "ensf409");
+	}
+	/**
+    	 * Getter method for the database url data member.
+     	 * @return	database url.
+    	 */
+    	public String getDburl(){
+        	return DBURL;
+    	}
+    	/**
+     	 * Getter method for username.
+     	 * @return	user's account username.
+     	 */
+    	public String getUsername(){
+        	return USERNAME;
+    	}
+    	/**
 	 * Getter method for password.
 	 * @return	user's account password.
 	 */
-    public String getPassword(){
-        return PASSWORD;
-    }
+    	public String getPassword(){
+        	return PASSWORD;
+    	}
 	/**
 	 * Creates connection to the database
 	 */
