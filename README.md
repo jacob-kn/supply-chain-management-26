@@ -54,4 +54,3 @@ Give an example
 * **Cole Pawliw** - *Item calculation* - [Cole-Pawliw](https://github.com/Cole-Pawliw)
 * **Ivan Suyat** - *File IO and user input handling* - [ivanezekielsuyat](https://github.com/ivanezekielsuyat)
 * **Hassan Khan** - *Unit Testing* - [Hassan-A-K](https://github.com/Hassan-A-K)
-
