@@ -14,8 +14,8 @@ public class beta {
     */
     @Test
     public void testConstructor(){
-        Inventory invent = new Inventory("dataBaseURL", "scm", "esnf409");
-        assertTrue("DBURL", "dataBaseURL".equals(invent.getDBURL));
+        Inventory invent = new Inventory("jdbc:mysql://localhost/inventory", "scm", "esnf409");
+        assertTrue("DBURL", "jdbc:mysql://localhost/inventory".equals(invent.getDBURL));
         assertTrue("USERNAME", "scm".equals(invent.getUSERNAME));
         assertTrue("PASSWORD", "esnf409".equals(invent.getPASSWORD));
     }
